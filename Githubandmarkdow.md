@@ -24,9 +24,9 @@ Hoặc thu gọn:
 Kết quả :[GITHUB](https://github.com)
 
 Để chèn ảnh sử dụng cú pháp:
-
+```
 <img src="link_anh_cua_ban">
-
+```
 link ảnh thì thường được tải lên trang https://imgur.com/ để tạo link ảnh.
 Ví dụ :
 
