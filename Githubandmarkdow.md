@@ -29,7 +29,9 @@ Kết quả :[GITHUB](https://github.com)
 
 link ảnh thì thường được tải lên trang https://imgur.com/ để tạo link ảnh.
 Ví dụ :
-<img src="https://imgur.com/leZ6ZcT">
+
+
+<img src="https://i.imgur.com/KDAzV62.jpg">
 
 ### c.Ký tự in đậm, in nghiêng
 - Để in đậm một đoạn text bạn chỉ cần làm như sau:
