@@ -138,32 +138,39 @@ vào nên bạn sẽ tạo một nhánh mới để làm việc trên đó. Đ�
 ![](images/checkoutiss53.PNG)
 - Ví dụ :
 - Đầu tiên ta có 1 file sample.txt :
+
 ![](images/40.PNG)
 - Ta tạo 1 nhánh branch mới tên là iss53 :
+
 ![](images/41.PNG)
 - Chỉnh sửa file sample.txt trên branch iss53 :
+
 ![](images/42.PNG)
 - Sau đó ta checkout ra branch master rồi gộp branch iss53 vào branch master :
 ![](images/43.PNG)
 - Sau đó cập nhật lên github 
+
 ![](images/44.PNG)
+
 ### 8.Lệnh git revert 
 - Ta sử dụng git revert để xóa bỏ trạng thái của 1 vài commit trước đó :
 - Câu lệnh :
 ``` git revert <commit_ID> ```
 - Ví dụ :
 - Ta xem log :
+
 ![](images/45.PNG)
+
 - Ta dùng lệnh :`git revert HEAD`.Kết quả :
 ![](images/47.PNG)
 ![](images/46.PNG)
 ### 9.Lệnh git reset
 - Lệnh git reset ta chủ yếu quan tâm đến git reset,git reset-hard , git reset -- soft
-``` git reset ```
+- ``` git reset ```
 	- Di chuyển HEAD về vị trí commmit reset và vẫn giữ nguyên tất cả các thay đổi của file, nhưng loại bỏ các thay đổi khỏi stage.
-``` git reset --hard ```
+- ``` git reset --hard ```
 - Di chuyển con trỏ HEAD về vị trí commmit reset và loại bỏ tất cả sự thay đổi của file sau thời điểm commit reset.
-``` git reset --soft ```
+- ``` git reset --soft ```
 - Lệnh này chỉ di chuyển HEAD về vị trí commit. Trạng thái của stage và tất cả sự thay đổi của file sẽ được giữ nguyên.
 Ví dụ :
 - Ta cũng xem log giống như trên, sau đó dùng lệnh get reset về vị trí commit_ID đã chọn
