@@ -110,53 +110,53 @@ brach tích hợp (Topic branch).
 - Giả sử bạn đang theo dõi repo của tôi và thấy có một số chỗ cần sửa đổi, bạn có thể comment ý kiến của mình vào Repo đó. 
 Sau đó người quản trị sẽ xem xét, thay đổi và trả lời bạn.
 - Để làm việc này bạn cần vào repo đó, click vào Issue. Ví dụ như hình sau:
-![](iss.PNG)
+![](images/iss.PNG)
 - Lúc này tại Repo của người quản trị sẽ thấy một Issue mới, người quản trị có thể click vào Issue này để xem, 
 sau đó xem xét sửa đổi, comment lại. Khi sửa đổi hoàn tất thì sẽ đóng issue đó lại.
-![](isss.PNG)
+![](images/isss.PNG)
 - Bằng cách tạo issue, bạn có thể đăng các câu hỏi, thắc mắc của mình cho chủ của repo đó.
 ### 6. Thao tác với tổ chức trong Github
 - Để tạo một nhóm cho nhiều người cùng làm việc ta làm như sau:
 	- Truy cập URL: https://github.com/settings/organizations, chọn New Organizations
 	- Đặt tên và email cho tổ chức
-![](newtochuc.PNG)
+![](images/newtochuc.PNG)
 - Tại mục `Choose the organization’s plan` chọn Open Source để miễn phí, nhưng lúc này các Repo trong tổ chức sẽ là public.
 	- Mời các thành viên cho tổ chức
-![](themthanhvien.PNG)
+![](images/themthanhvien.PNG)
 - Khi tạo thành công 
-![](Taothanhcong.PNG)
+![](images/Taothanhcong.PNG)
 - Ở đây ta tạo 1 nhóm mới :
-![](Taoteam.PNG)
+![](images/Taoteam.PNG)
 - Để mời một người dùng khác vào team, ta click vào team đó và search tên của người dùng cần tìm
-![](themkhitaoxong.PNG)
+![](images/themkhitaoxong.PNG)
 ### 7.Lệnh checkout
 - Để hiểu được lệnh git checkout thì ta phải hiểu được về phân nhánh và tích hợp.
 - Đầu tiên, giả sử bạn đang làm việc trên một dự án đã có một số commit từ trước
-![](bandau.PNG)
+![](images/bandau.PNG)
 - Để cho rõ ràng, Git không cung cấp kèm bất kỳ hệ thống giám sát vấn đề nào.nhưng bởi vì vấn đề số #53 là cái mà bạn sẽ tập trung
 vào nên bạn sẽ tạo một nhánh mới để làm việc trên đó. Để tạo một nhánh và chuyển sang nhánh đó đồng thời, bạn có thể chạy lệnh git checkout
-![](checkoutiss53.PNG)
+![](images/checkoutiss53.PNG)
 - Ví dụ :
 - Đầu tiên ta có 1 file sample.txt :
-![](40.PNG)
+![](images/40.PNG)
 - Ta tạo 1 nhánh branch mới tên là iss53 :
-![](41.PNG)
+![](images/41.PNG)
 - Chỉnh sửa file sample.txt trên branch iss53 :
-![](42.PNG)
+![](images/42.PNG)
 - Sau đó ta checkout ra branch master rồi gộp branch iss53 vào branch master :
-![](43.PNG)
+![](images/43.PNG)
 - Sau đó cập nhật lên github 
-![](44.PNG)
+![](images/44.PNG)
 ### 8.Lệnh git revert 
 - Ta sử dụng git revert để xóa bỏ trạng thái của 1 vài commit trước đó :
 - Câu lệnh :
 ``` git revert <commit_ID> ```
 - Ví dụ :
 - Ta xem log :
-![](45.PNG)
+![](images/45.PNG)
 - Ta dùng lệnh :`git revert HEAD`.Kết quả :
-![](47.PNG)
-![](46.PNG)
+![](images/47.PNG)
+![](images/46.PNG)
 ### 9.Lệnh git reset
 - Lệnh git reset ta chủ yếu quan tâm đến git reset,git reset-hard , git reset -- soft
 ``` git reset ```
@@ -167,7 +167,7 @@ vào nên bạn sẽ tạo một nhánh mới để làm việc trên đó. Đ�
 - Lệnh này chỉ di chuyển HEAD về vị trí commit. Trạng thái của stage và tất cả sự thay đổi của file sẽ được giữ nguyên.
 Ví dụ :
 - Ta cũng xem log giống như trên, sau đó dùng lệnh get reset về vị trí commit_ID đã chọn
-![](49.PNG)
+![](images/49.PNG)
 ```
 Về 3 lệnh trên, ta tổng kết được như sau :
 Về Git checkout ta nói đơn giản là khi tạm thời ta sử dụng 1 commit mới,ta thực hiện tạo 1 nhánh khác ra để xử lí công việc khác,
