@@ -1,0 +1,107 @@
+# GIT và GITHUB
+## I.GIT là gì ?
+- Git là một trong những Hệ thống Quản lý Phiên bản Phân tán, vốn được phát triển nhằm quản lý mã nguồn (source code) hữu hiệu của Linux.
+- Trên Git, có thể lưu trạng thái của file khi có nhu cầu dưới dạng lịch sử cập nhật. Vì thế, có thể đưa file đã chỉnh sửa một lần về trạng thái cũ hay có thể
+ hiển thị sự khác biệt ở nơi chỉnh sửa.
+- Github là một trang web, cho phép bạn lưu source code của mình lên đó. Sự kết hợp hoàn hảo giữa Git và Github mang lại một sự thuận tiện không hề nhỏ cho người dùng. 
+Bạn có thể thay đổi đoạn code của mình mọi lúc mọi nơi mà không sợ bị ghi đè lên hay bị mất dữ liệu do hỏng hóc vì dữ liệu của bạn được lưu cả trên trang web Github và máy cá nhân. 
+Bạn cũng có thể khôi phục được code của mình về một thời điểm bất kỳ nào đó.
+- Github có bản free và mất phí. Với Github free thì source code của bạn sẽ công khai, có nghĩa là ai cũng có thể xem code của bạn. Nó phù hợp với các phần mềm nguồn mở, 
+và cũng có thể trở thành một blog cá nhân của chính các bạn như các trang blogspot, wordpress,...
+- Repository là nơi sẽ ghi lại trạng thái của thư mục và file. Trạng thái được lưu lại đang được chứa như là lịch sử thay đổi của nội dung. Bằng việc đặt thư mục muốn 
+quản lý lịch sử thay đổi dưới sự quản lý của repository, có thể ghi chép lại lịch sử thay đổi của thư mục và file trong thư mục đó.
+- Có 2 loại repository :
+	- Remote repository: Là repository để chia sẻ giữa nhiều người và bố trí trên server chuyên dụng.
+	- Local repository: Là repository bố trí trên máy của bản thân mình, dành cho một người dùng sử dụng.
+### a. Push lên git
+- Để chia sẻ lịch sử thay đổi của local repository mà bản thân đang có bằng remote repository, cần phải upload lịch sử thay đổi trong local repository.
+Vì thế, sẽ thực hiện thao tác gọi là Push trên Git. Khi thực hiện Push, lịch sử thay đổi của bản thân sẽ được upload lên remote repository 
+và lịch sử thay đổi của remote repository sẽ có trạng thái giống với local repository.
+### b. Clone
+- Để sao chép remote repository, sẽ thực hiện thao tác gọi là "clone".
+Khi thực hiện Clone, sẽ tải về toàn bộ nội dung của remote repository, và có thể tạo thành local repository ở máy khác.
+### c. Pull
+- Để cập nhật local repository từ remote repository thì thực hiện thao tác gọi là Pull.
+Khi thực hiện Pull, sẽ tải lịch sử thay đổi mới nhất từ remote repository về, rồi đưa nội dung đó vào local repository của bản thân.
+### d. Branch
+- Branch là cái dùng để phân nhánh và ghi lại luồng của lịch sử. Branch đã phân nhánh sẽ không ảnh hưởng đến branch khác nên có thể 
+tiến hành nhiều thay đổi đồng thời trong cùng 1 repository.
+Hơn nữa, branch đã phân nhánh có thể chỉnh sửa tổng hợp lại thành 1 branch bằng việc hợp lại (merge) với branch khác.
+- Brach master :
+Khi tiến hành commit lần đầu trong repository thì Git sẽ tạo ra một branch có tên là master. Vì thế những lần commit sau sẽ được thêm vào
+ branch master cho đến khi chuyển đổi branch.
+- Có 2 loại brach là brach chủ đề (Integration branch) và 
+brach tích hợp (Topic branch). 
+	- Topic branch :Topic branch là branch tạo ra nhằm tiến hành công việc liên quan đến chủ đề như là chỉnh sửa lỗi hay là thêm chức năng. Khi tiến hành cùng lúc những công việc 
+	có liên quan đến nhiều chủ đề thì số lượng branch chủ đề tương ứng sẽ được tạo ra.
+	- Intergration branch : Intergration branch là branch có thể tạo ra bản phát hành bất cứ khi nào. Hơn nữa, nó cũng được sử dụng như là nguồn phân branch của topic branch.
+	Vì thế, việc duy trì trạng thái ổn định là điều cần thiết.
+## II . Vận dụng
+### 1.Cơ bản : Tạo github repository và clone,pull và push đơn giản.
+### a. Tạo github repository và clone
+- Tạo github repository bằng cách truy cập github.com tạo 1 tài khoản đề bắt đầu và tạo repository giống với hình bên dưới.
+![](images/a.png)
+- Clone từ github về máy của bạn : 
+![](images/1.png)
+- Kết quả clone thành công :
+![](images/2.PNG)
+### b.Push và pull
+- Push 1 file text.txt lên github :
+![](images/4.PNG)
+- Push thành công lên github :
+![](images/5.PNG)
+- Pull từ repository :
+![](images/10.PNG)
+- Chỉnh sửa nội dụng trong file text.txt sau đó push
+![](images/11.PNG)
+
+![](images/12.PNG)
+- Nội dung mới đã được push lên repository
+- Xem lại nhật kí đã thay đổi của repository :
+![](images/14.PNG)
+### 2.Branch,Merge
+### a.Tạo branch và thực hiện trên branch
+- Ta tạo 1 branch tên là branch mới,tạo 1 file trên branch là text2.txt.
+![](images/17.PNG)
+- Chỉnh sửa file text2.txt trên branch mới tạo tên là branch-moi:
+![](images/19.PNG)
+- Push file lên remote,trong mục branch có 1 branch tên là branch-moi được cập nhật khi push file text2.txt lên git
+![](images/20.PNG)
+- Khi pull về, ta nhận thấy đã có 2 branch là branch master và branch mới :
+![](images/21.PNG)
+- Tiếp theo thực hiện git merge để đồng bộ từ branch-moi vào branch master : 
+![](images/22.PNG)
+- Trên github, ta nhận thấy được điều đó : text2.txt đã được merge vào branch master
+![](images/23.PNG)
+### b.	Tới phần Pull Request :
+-	1 người dùng pull về  :
+![](images/24.PNG)
+- Thực hiện chỉnh sửa file README.md,sau đó push lên remote :
+![](images/25.PNG)
+- Ở trên remote nhận được thông báo pull request:
+![](images/26.PNG)
+- Nhấn vào pull request,ở đây hiện ra những thay đổi mà người dùng đã chỉnh sửa :
+![](images/27.PNG)
+- Khi đấy sẽ để lại lời nhắn nhờ người quản trị branch master merch giúp :
+![](images/28.PNG)
+-	Khi này người quản trị branch master sẽ request lại :
+![](images/29.PNG)
+- Trả lời lại đồng ý hoặc không đồng ý hoặc thêm ý kiến chỉnh sửa,khi đấy bên người dùng sẽ nhận được :
+![](images/30.PNG)
+- Chấp nhận merge nhấn confirm merge để duyệt :
+![](images/31.PNG)
+- Sau đó thực hiện xóa khi đã chấp nhận merge :
+![](images/32.PNG)
+- Kết quả thành công :
+![](images/thanhcong.PNG)
+### c. Reset commit
+- Đầu tiên ta thực tiện tạo file touch3.txt :
+![](images/33.PNG)
+- Xem git log thấy có thông báo add file :
+![](images/34.PNG)
+- Có 2 kiểu reset là rest-soft và reset-hard :
+![](images/35.PNG)
+![](images/36.PNG)
+- Reset-soft là  chỉ di chuyển HEAD về vị trí commit. Trạng thái của stage và tất cả sự thay đổi của file sẽ được giữ nguyên.
+- Reset hard là xóa luôn thay đổi trên local demo
+- HEAD^1 là reset từ HEAD local về commit trước đó. 
